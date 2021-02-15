@@ -6,7 +6,7 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "book_information")
-public class BookInformation {
+public class BookInformation implements Comparable<BookInformation> {
     @Id
     private String bookId;
     private String title;
@@ -21,5 +21,10 @@ public class BookInformation {
         this.title = title;
         this.author = author;
         this.publishDate = publishDate;
+    }
+
+    @Override
+    public int compareTo(BookInformation other) {
+        return Long.compare(publishDate, other.publishDate);
     }
 }

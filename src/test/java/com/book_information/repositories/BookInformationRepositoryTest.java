@@ -56,7 +56,7 @@ public class BookInformationRepositoryTest {
     @Test
     public void shouldBeEmptyWhenNoMatchingBookTitle() {
         List<BookInformation> books = bookInformationRepository.findByTitleContaining("NotPresentBook");
-        assertEquals(0, books.size());
+        assertTrue(books.isEmpty());
     }
 
     private void setupTestData() {
