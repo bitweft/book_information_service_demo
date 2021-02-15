@@ -27,4 +27,20 @@ public class BookInformation implements Comparable<BookInformation> {
     public int compareTo(BookInformation other) {
         return Long.compare(publishDate, other.publishDate);
     }
+
+    public String getBookId() {
+        return bookId;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public String getAuthor() {
+        return author;
+    }
+
+    public Long getPublishDate() {
+        return publishDate;
+    }
 }
