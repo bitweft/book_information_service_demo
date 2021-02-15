@@ -45,12 +45,12 @@ public class BookInformationControllerTest {
         mockMvc.perform(get("/search").param("title", "someTitle"))
                 .andDo(print())
                 .andExpect(status().isOk())
-                .andExpect(MockMvcResultMatchers.content().json(getExpectedBookInformationResponse()));
+                .andExpect(MockMvcResultMatchers.content().json(getExpectedBookInformationResponse(), true));
     }
 
     private List<BookInformation> getMockBooksInformation() {
-        BookInformation book1 = new BookInformation("book-1", "title-1", "author-1", 100);
-        BookInformation book2 = new BookInformation("book-2", "title-2", "author-2", 200);
+        BookInformation book1 = new BookInformation("book-1", "title-1", "author-1", "url1", 100);
+        BookInformation book2 = new BookInformation("book-2", "title-2", "author-2", "url2", 200);
         return List.of(book1, book2);
     }
 
@@ -61,12 +61,14 @@ public class BookInformationControllerTest {
                             "bookId": "book-1",
                             "title": "title-1",
                             "author": "author-1",
+                            "imageUrl": "url1",
                             "publishDate": 100
                           },
                           {
                             "bookId": "book-2",
                             "title": "title-2",
                             "author": "author-2",
+                            "imageUrl": "url2",
                             "publishDate": 200
                           }
                         ]

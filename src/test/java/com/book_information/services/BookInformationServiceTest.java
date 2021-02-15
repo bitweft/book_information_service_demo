@@ -23,12 +23,12 @@ public class BookInformationServiceTest {
     @InjectMocks
     private BookInformationService bookInformationService;
 
-    private final BookInformation book1 = new BookInformation("book1", "title1", "author1", 500);
-    private final BookInformation book2 = new BookInformation("book2", "title2", "author2", 200);
-    private final BookInformation book3 = new BookInformation("book3", "title3", "author2", 700);
-    private final BookInformation book4 = new BookInformation("book4", "title4", "author4", 1200);
-    private final BookInformation book5 = new BookInformation("book5", "title5", "author5", 100);
-    private final BookInformation book6 = new BookInformation("book6", "title6", "author6", 400);
+    private final BookInformation book1 = new BookInformation("book1", "title1", "author1", "url1", 500);
+    private final BookInformation book2 = new BookInformation("book2", "title2", "author2", "url2", 200);
+    private final BookInformation book3 = new BookInformation("book3", "title3", "author2", "url3", 700);
+    private final BookInformation book4 = new BookInformation("book4", "title4", "author4", "url4", 1200);
+    private final BookInformation book5 = new BookInformation("book5", "title5", "author5", "url5", 100);
+    private final BookInformation book6 = new BookInformation("book6", "title6", "author6", "url6", 400);
 
     @Test
     public void shouldBeEmptyWhenNoBooks() {

@@ -60,9 +60,9 @@ public class BookInformationRepositoryTest {
     }
 
     private void setupTestData() {
-        book1 = new BookInformation("id-1", "Harry Potter 1", "JK Rowling", 867283200);
-        book2 = new BookInformation("id-2", "Harry Potter 2", "JK Rowling", 899337600);
-        book3 = new BookInformation("id-3", "The Lord of the Rings 1", "JRR Tolkien", -487123200);
+        book1 = new BookInformation("id-1", "Harry Potter 1", "JK Rowling", "url1", 867283200);
+        book2 = new BookInformation("id-2", "Harry Potter 2", "JK Rowling", "url2", 899337600);
+        book3 = new BookInformation("id-3", "The Lord of the Rings 1", "JRR Tolkien", "url3", -487123200);
         entityManager.persist(book1);
         entityManager.persist(book2);
         entityManager.persist(book3);

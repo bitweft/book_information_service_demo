@@ -12,14 +12,16 @@ public class BookInformation implements Comparable<BookInformation> {
     private String title;
     private String author;
     private Long publishDate;
+    private String imageUrl;
 
     public BookInformation() {
     }
 
-    public BookInformation(String bookId, String title, String author, long publishDate) {
+    public BookInformation(String bookId, String title, String author, String imageUrl, long publishDate) {
         this.bookId = bookId;
         this.title = title;
         this.author = author;
+        this.imageUrl = imageUrl;
         this.publishDate = publishDate;
     }
 
@@ -38,6 +40,10 @@ public class BookInformation implements Comparable<BookInformation> {
 
     public String getAuthor() {
         return author;
+    }
+
+    public String getImageUrl() {
+        return imageUrl;
     }
 
     public Long getPublishDate() {
