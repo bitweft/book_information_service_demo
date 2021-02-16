@@ -31,7 +31,7 @@ public class BookInformationServiceTest {
     private final BookInformation book6 = new BookInformation("book6", "title6", "author6", "url6", 400);
 
     @Test
-    public void shouldBeEmptyWhenNoBooks() {
+    public void shouldReturnEmptyWhenNoBooks() {
         Mockito.when(bookInformationRepository.findByTitleContaining("someName")).thenReturn(new ArrayList<>());
 
         List<BookInformation> books = bookInformationService.getBooksBy("someName");
