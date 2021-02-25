@@ -40,8 +40,8 @@ public class BookInformationServiceTest {
 
     @Test
     public void shouldReturnMaxFiveBooksBasedOnPublishedDate() {
-        List<BookInformation> mockData = Arrays.asList(book1, book2, book3, book4, book5, book6);
-        Mockito.when(bookInformationRepository.findByTitleContaining("title")).thenReturn(mockData);
+        List<BookInformation> stubbedData = Arrays.asList(book1, book2, book3, book4, book5, book6);
+        Mockito.when(bookInformationRepository.findByTitleContaining("title")).thenReturn(stubbedData);
 
         List<BookInformation> actualBooks = bookInformationService.getBooksBy("title");
         assertEquals(5, actualBooks.size());
